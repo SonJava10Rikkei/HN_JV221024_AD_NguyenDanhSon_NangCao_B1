@@ -3,10 +3,7 @@ package ra.run;
 import ra.bussinessImp.Author;
 import ra.bussinessImp.Book;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class BookManagement {
     public static List<Author> authors = new ArrayList<>();
@@ -46,7 +43,11 @@ public class BookManagement {
                     }
                     break;
                 case 3:
+                    System.out.println("Sắp xếp sách theo giá xuất sách tăng dần: " );
                     Collections.sort(books);
+                    for(Book book: books) {
+                        book.displayData();
+                    }
                     break;
                 case 4:
                     System.out.println("Nhập tên-tác giả sách cần tìm :");
